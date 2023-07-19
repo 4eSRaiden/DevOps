@@ -1,11 +1,14 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
-const { Builder, By, until } = require('selenium-webdriver');
+const { Builder, By, until, Capabilities } = require('selenium-webdriver');
 const { expect } = require('chai');
+const chrome = require('selenium-webdriver/chrome');
 
 let driver;
 
 Given('I am on the main page', async function() {
-  driver = await new Builder().forBrowser('chrome').build();
+  let chromeOptions = new chrome.Options();
+  chromeOptions.addArguments("--headless");
+  driver = await new Builder().forBrowser('chrome').setChromeOptions(chromeOptions).build();
   await driver.get('http://localhost:3000');
 });
 
