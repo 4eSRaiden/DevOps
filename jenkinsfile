@@ -6,6 +6,13 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Install dependencies') {
+            steps {
+                script {
+                    sh 'npm install'
+                }
+            }
+        }
         stage('Run Tests') {
             steps {
                 script {
