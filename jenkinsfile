@@ -13,6 +13,13 @@ pipeline {
                 }
             }
         }
+        stage('Run the app') {
+            steps {
+                script {
+                    sh 'npm start'
+                }
+            }
+        }
         stage('Run Tests') {
             steps {
                 script {
