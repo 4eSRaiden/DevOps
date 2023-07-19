@@ -1,10 +1,10 @@
 {
-  "name": "starter-node-express-bootstrap",
+  "name": "devops",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alectrify/starter-node-express-bootstrap.git"
+    "url": "git+https://github.com/4eSRaiden/DevOps.git"
   },
   "scripts": {
     "fix": "eslint --fix auth middleware models routes src index.js",
@@ -16,7 +16,7 @@
     "start": "node index.js",
     "test": "cucumber-js"
   },
-  "author": "Alectrify Software",
+  "author": "Adrien Biguet",
   "dependencies": {
     "@popperjs/core": "^2.6.0",
     "@sendgrid/mail": "^7.4.5",
