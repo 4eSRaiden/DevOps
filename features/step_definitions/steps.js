@@ -7,7 +7,7 @@ let driver;
 
 Given('I am on the main page', async function() {
   let firefoxOptions = new firefox.Options();
-  //firefoxOptions.addArguments("--headless");
+  firefoxOptions.addArguments("--headless");
   driver = await new Builder().forBrowser('firefox').setFirefoxOptions(firefoxOptions).build();
   await driver.get('http://localhost:3000');
 });
